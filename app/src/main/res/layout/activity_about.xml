@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_about"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4px"
+                android:text="@string/app_name_in_about"
+                android:textColor="@color/gray2"
+                android:textSize="18sp"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.lqr.optionitemview.OptionItemView
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            app:left_text="@string/function_introduction"
+            app:left_text_color="@color/black0"
+            app:left_text_margin_left="@dimen/option_item_margin_left"
+            app:left_text_size="16sp"/>
+
+        <View
+            style="@style/Line"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            />
+
+
+        <com.lqr.optionitemview.OptionItemView
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            app:left_text="@string/complaint"
+            app:left_text_color="@color/black0"
+            app:left_text_margin_left="@dimen/option_item_margin_left"
+            app:left_text_size="16sp"/>
+
+        <View
+            style="@style/Line"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            />
+
+
+        <com.lqr.optionitemview.OptionItemView
+            style="@style/OptionItem"
+            android:background="@drawable/selector_option_item"
+            app:left_text="@string/check_update"
+            app:left_text_color="@color/black0"
+            app:left_text_margin_left="@dimen/option_item_margin_left"
+            app:left_text_size="16sp"/>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/terms_of_use_and_privacy_policy"
+        android:textColor="@color/blue0"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="不涉及任何版权问题"
+        android:textColor="@color/gray2"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

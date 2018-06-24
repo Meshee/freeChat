@@ -1,0 +1,129 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: ‘com.jakewharton.butterknife
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "cn.meshee.freechat"
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        resConfigs "en", "zh-rCN"
+    }
+
+    signingConfigs {
+        config {
+            /*storeFile file(KEY_PATH)
+            storePassword KEY_PASS
+            keyAlias ALIAS_NAME
+            keyPassword ALIAS_PASS*/
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories { flatDir { dirs 'libs' } }
+}
+
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+def BUTTER_KNIFE_VERSION="8.8.1"
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //implementation 'com.jakewharton:butterknife:8.8.1'
+    //annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+  // annotationProcessor 'com.jakewharton:butterknife-compiler:7.0.1'
+
+    //TODO remove
+    //compile 'cat.ereza:customactivityoncrash:1.5.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTER_KNIFE_VERSION"
+
+    compile "com.jakewharton:butterknife:$BUTTER_KNIFE_VERSION"
+    // compile 'com.jakewharton:butterknife:7.0.1'
+
+
+
+    //compile(name: 'sdk-debug', ext:'aar')
+    compile(name: 'sdk-release', ext:'aar')
+    compile 'com.lqr.audio:library:1.0.0'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:cardview-v7:27.1.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.lqr.adapter:library:1.0.2'
+    compile 'com.lqr.recyclerview:library:1.0.2'
+    compile 'com.lqr.ninegridimageview:library:1.0.0'
+    compile 'com.lqr.optionitemview:library:1.0.7'
+    compile 'com.lqr.emoji:library:1.0.2'
+
+    compile 'com.lqr.imagepicker:library:1.0.0'
+    compile 'cjt.library.wheel:camera:0.1.9'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.jaeger.statusbaruitl:library:1.3.5'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7'
+    compile 'me.drakeet.materialdialog:library:1.3.1'
+    compile 'com.kyleduo.switchbutton:library:1.4.4'
+    compile 'com.lovedise:permissiongen:0.0.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+   // compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'com.android.support:multidex:1.0.3'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.reginald:editspinner:1.0.0'
+
+    //dynamic loaded library must be included into apk
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.google.zxing:core:3.2.1'
+
+    //add in liveshow
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+    //add in liveshow
+   /*compile(name: 'ijkplayer-java-release', ext:'aar')
+   compile(name: 'ijkplayer-armv7a-release', ext:'aar')
+   compile(name: 'ijkplayer-exo-release', ext:'aar')*/
+
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置语音消息的码率 (单位 bps)-->
+
+    <!--原图压缩比例-->
+    <!--原图压缩宽、高-->
+    <!-- 设置发送输入状态 -->
+    <!-- 下载文件默认存储路径 -->
+    <!--<string name="rc_media_message_default_save_path">/RongCloud/Media/</string>-->
+    <!-- 是否开启 Extension 记忆功能 -->
+</resources>

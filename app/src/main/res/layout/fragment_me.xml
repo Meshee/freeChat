@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/llMyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="178px"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_common_item"
+        android:gravity="center_vertical"
+        android:paddingRight="6px">
+
+        <ImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_header"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="140px"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6px"
+                android:singleLine="true"
+                android:text="沧晓"
+                android:textColor="@color/gray0"
+                android:textSize="30px"/>
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6px"
+                android:singleLine="true"
+                android:text="@string/my_chat_account"
+                android:textColor="@color/gray2"
+                android:textSize="26px"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <!--<ImageView
+            android:id="@+id/ivQRCordCard"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            android:src="@mipmap/ic_qr_code"/>-->
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            style="@style/Line"
+            android:layout_marginLeft="@dimen/option_item_margin_left"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <!--<com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivQRCodeCard"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_common_item"
+        app:left_image_margin_left="@dimen/option_item_margin_left"
+        app:left_image_margin_right="@dimen/option_item_margin_right"
+        app:left_src="@mipmap/ic_qr_code"
+        app:left_text="@string/qr_code_network"
+        app:left_text_color="@color/black0"
+        app:left_text_size="16sp"/>-->
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivSetting"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_common_item"
+        android:clickable="true"
+        app:left_image_margin_left="@dimen/option_item_margin_left"
+        app:left_image_margin_right="@dimen/option_item_margin_right"
+        app:left_src="@mipmap/ic_setting_blue"
+        app:left_text="@string/setting"
+        app:left_text_color="@color/black0"
+        app:left_text_size="16sp"/>
+
+    <!--<com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivLiveResource"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+
+        android:background="@drawable/selector_common_item"
+        android:clickable="true"
+        app:left_image_margin_left="@dimen/option_item_margin_left"
+        app:left_image_margin_right="@dimen/option_item_margin_right"
+        app:left_src="@mipmap/ic_video_blue"
+        app:left_text="@string/liveresource"
+        app:left_text_color="@color/black0"
+        app:left_text_size="16sp"/>-->
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivLiveShow"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_common_item"
+        android:clickable="true"
+        app:left_image_margin_left="@dimen/option_item_margin_left"
+        app:left_image_margin_right="@dimen/option_item_margin_right"
+        app:left_src="@mipmap/ic_video_blue"
+        app:left_text="@string/liveshow"
+        app:left_text_color="@color/black0"
+        app:left_text_size="16sp"/>
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivMeshShow"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_common_item"
+        android:clickable="true"
+        app:left_image_margin_left="@dimen/option_item_margin_left"
+        app:left_image_margin_right="@dimen/option_item_margin_right"
+        app:left_src="@mipmap/ic_video_blue"
+        app:left_text="@string/meshshow"
+        app:left_text_color="@color/black0"
+        app:left_text_size="16sp"/>
+</com.zhy.autolayout.AutoLinearLayout>
